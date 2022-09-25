@@ -220,5 +220,36 @@ shoppingCart[2]='Green Tea';
 console.log(shoppingCart)
 */
 
+/*
 
+27. The following is an array of 10 students ages:
+    => const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+    - Sort the array and find the min and max age
+    - Find the median age(one middle item or two middle items divided by two)
+    - Find the average age(all items divided by number of items)
+    - Find the range of the ages(max minus min)
+    - Compare the value of (min - average) and (max - average), use abs() method
+*/
+const ages = [19, 22, 19, 24, 20, 25, 26, 45, 25, 28, 30]
 
+// sorting array
+console.log(ages.sort());
+console.log(`min age is ${ages[0]} and max age is ${ages[ages.length-1]}`)
+// median
+
+let mdnPosition = ages.length/2;
+
+if (ages.length%2===0){
+    console.log(`Median is ${ages[mdnPosition]}`);
+}
+else{
+    let temp = Math.floor(mdnPosition)
+    console.log(`Median is ${ages[temp]}`);
+}
+let sum = 0;
+for(let i=0; i<ages.length; i++){
+    sum = sum + ages[i];
+    var sumResult = sum;
+}
+console.log(sumResult);
+console.log(`Avarage is ${sumResult/ages.length}`);

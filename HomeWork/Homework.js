@@ -230,6 +230,8 @@ console.log(shoppingCart)
     - Find the range of the ages(max minus min)
     - Compare the value of (min - average) and (max - average), use abs() method
 */
+
+/*
 const ages = [19, 22, 19, 24, 20, 25, 26, 45, 25, 28, 30]
 
 // sorting array
@@ -253,3 +255,4 @@ for(let i=0; i<ages.length; i++){
 }
 console.log(sumResult);
 console.log(`Avarage is ${sumResult/ages.length}`);
+*/

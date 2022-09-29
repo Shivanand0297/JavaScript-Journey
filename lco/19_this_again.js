@@ -6,7 +6,7 @@ var user = {
     getcourseCount: function(){
         console.log('line 7', this);
         function hello (){
-            console.log('line9', this); // TODO: for all regular function calls, this points to window objects
+            console.log('line9', this); // TODO: for all regular function calls, "this" points to window objects
         }
         hello();
     }

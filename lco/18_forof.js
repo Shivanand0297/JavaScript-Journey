@@ -20,6 +20,6 @@ const names = {
     mani: 'manisha'
 };
 
-for (const n in names){
+for (const n in names){ //for in for objects
     console.log(`key is: ${n} and value is: ${names[n]}`);
 }

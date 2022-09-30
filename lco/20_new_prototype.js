@@ -1,7 +1,7 @@
-//making prototype(blueprint) for every single user for signup
-// recomended to use capital letter 'User' for prototype
+//TODO: making prototype(blueprint) for every single user for signup
+// recommended to use capital letter 'User' for prototype
 var User = function(firstName, courseCount){ //functional way for creating the object
-    this.firstName = firstName; // recomended way of defining objects (functional approch)
+    this.firstName = firstName; // recommended way of defining objects (functional approch)
     this.courseCount = courseCount; 
     this.getCourseCount = function(){ //method
         console.log(`Course count is ${this.courseCount}`);
@@ -10,6 +10,7 @@ var User = function(firstName, courseCount){ //functional way for creating the o
 
 // var name1 = User("shivanand", 2); // will give undefined.
 // Whenever we want to define a new object by functional way we use "new" keyword
+
 /*
 new: responsible for 
 - Using functional syntax of object
@@ -17,9 +18,10 @@ new: responsible for
 - Also take care of "this" keyword and moves it from global object to function user 
 */
 
-// to add properties in the main object without actually changing the code of the main object which can be access by all new users.
+// to add properties in the main object prototype without actually changing the code of the main object which can be access by all new users.
 
 User.prototype.getFirstName = function(){ //new also looks for these prototypes which are defined outside the main object to add it into the main object.
+    
     console.log(`Your first name is ${this.firstName}`);
 }
 

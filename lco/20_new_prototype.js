@@ -28,17 +28,15 @@ User.prototype.getFirstName = function(){ //new also looks for these prototypes 
 
 var name1 = new User("shivanand", 2); //not a regular function call, pointing to function, for regular function call "this" point to window object.
 name1.getCourseCount();
-name1.getFirstName();
-//console.log(name1);
+
+// Always check first that property is present in the object or not by hasOwnPropery();
+if (name1.hasOwnProperty("firstName")) { // checking if the property is present in the object or not
+    
+    name1.getFirstName();
+}
+else console.log("property not present");
 
 
 var name2 = new User("prajapati", 3);
 name2.getCourseCount();
 name2.getFirstName();
-//console.log(name2);
-
-
-var name3 = new User("saini", 6);
-name3.getCourseCount();
-name3.getFirstName();
-//console.log(name2);

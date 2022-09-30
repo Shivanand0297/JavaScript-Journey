@@ -14,3 +14,8 @@ var name1 = new User ("shiva", 1);
 // console.log(name1);
 name1.getCourseCount();
 name1.getFirstName();
+
+var name2 = new User ("akash", 3);
+// console.log(name1);
+name2.getCourseCount();
+name2.getFirstName();

@@ -28,7 +28,12 @@ saini.getInfo(); // will give error because getinfo method is not defined inthe 
 */
 
 // bind always returns the reference of the function
+
 var info = shivanand.getInfo.bind(saini);
 info();
 
 // shivanand.getInfo.bind(saini)(); // another way
+
+// TODO: call: works almost same as bind this will automatically logs the value
+
+shivanand.getInfo.call(saini);

@@ -1,3 +1,5 @@
+//Array of objects
+
 const courses = [
     {
     name: "React JS course",
@@ -24,7 +26,7 @@ const courses = [
 function generateList (){
     
     const ul = document.querySelector(".list-group")    //targeting and getting ul
-    
+    ul.innerHTML="";
     courses.forEach(selectedcourse => {     // iterating throught the array to throw the content in the list
 
         const li = document.createElement("li") // creating list item <li></li>
@@ -69,7 +71,24 @@ function generateList (){
     })
 }
 
-// generateList(); // this is running all the time, we eant to run it when the page loads
+// generateList(); // this is running all the time, we want to run it when the page loads
 
-window.addEventListener("load", generateList);
+window.addEventListener("load", generateList);  //note that here only referece of thr function generatelist is passed because addEventListener runs it automatically
 
+//targeting button
+
+const button = document.querySelector(".sort-btn");
+
+button.addEventListener("click", ()=>{
+    courses.sort((a,b) => a.price - b.price );
+    generateList();
+});
+
+//targeting sort-btn-dec
+
+const button2 = document.querySelector(".sort-btn-dec");
+
+button2.addEventListener("click", ()=>{
+    courses.sort((a,b) => b.price - a.price );
+    generateList();
+});

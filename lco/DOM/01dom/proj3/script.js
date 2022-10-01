@@ -26,7 +26,9 @@ const courses = [
 function generateList (){
     
     const ul = document.querySelector(".list-group")    //targeting and getting ul
-    ul.innerHTML="";
+    
+    ul.innerHTML=""; // resets the contents after every function call so that previous data is not there
+ 
     courses.forEach(selectedcourse => {     // iterating throught the array to throw the content in the list
 
         const li = document.createElement("li") // creating list item <li></li>
@@ -80,7 +82,7 @@ window.addEventListener("load", generateList);  //note that here only referece o
 const button = document.querySelector(".sort-btn");
 
 button.addEventListener("click", ()=>{
-    courses.sort((a,b) => a.price - b.price );
+    courses.sort((a,b) => a.price - b.price );  //sorting in assending order
     generateList();
 });
 
@@ -88,7 +90,7 @@ button.addEventListener("click", ()=>{
 
 const button2 = document.querySelector(".sort-btn-dec");
 
-button2.addEventListener("click", ()=>{
+button2.addEventListener("click", ()=>{  //sorting in decending order
     courses.sort((a,b) => b.price - a.price );
     generateList();
 });

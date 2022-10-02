@@ -3,7 +3,7 @@
 
 // TODO: javascript is a synchronous, single threaded language means 
 // synchronous: means one by one
-// single threaded: means one step at a time and if one step is taking long, the next step wont be excuted
+// single threaded: means one step at a time and if one step is taking long, the next step wont be executed
 
 var count = 10;
 var count2 = 20;

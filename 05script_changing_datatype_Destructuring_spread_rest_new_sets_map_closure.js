@@ -128,7 +128,7 @@ console.log(name2);
 
 
 // TODO: Maps
-// maps holds key value pairs where key can be of any data type
+// maps holds key value pairs where key and value can be of any data type
 
 let temp = new Map();
 // console.log(temp);
@@ -161,14 +161,43 @@ let newmapping = new Map(city);
 // console.log(newmapping);
 // console.log(newmapping.get("raj"));
 
-// for iterating
+/*
+var mymap = new Map();
 
-// google it
-// for(let i of newmapping){
-//     console.log(i);
-// }
+mymap.set(1, "one") //keys can be anything and value can be anything: strings, arrays, no., objects, boolean
 
-//TODO: forech forof usage in maps
+mymap.set(2, "two"); //sets the values
+mymap.set(3, "three");
+mymap.set(4, "four");
+console.log(mymap);
+
+console.log((mymap.get(2))); // to get values
+
+// TODO: for iteration in maps 
+// getting keys
+for (const key of mymap.keys()) {
+    console.log(`key is ${key}`);
+}
+
+// TODO: getting values
+for (const value of mymap.values()) {
+    console.log(`value is ${value}`);
+}
+
+// TODO: for accessing both key and value
+for (const [key, value] of mymap) {
+    console.log(`key is ${key} & value is ${value}`);
+}
+
+mymap.forEach( (key) => console.log(`${key}`) ) //for each is designed in such a way that it expects that you are working with the values, therefore it gives value rather than keys
+
+mymap.forEach((key, value) => console.log(`${key} and key is ${value}`))  // it gives value first then key
+
+//deleting
+
+mymap.delete(2)
+console.log(mymap);
+*/
 
 // TODO: CLOSURE
 

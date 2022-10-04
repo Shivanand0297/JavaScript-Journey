@@ -1,5 +1,7 @@
 //TODO: making prototype(blueprint) for every single user for signup
 // recommended to use capital letter 'User' for prototype
+
+
 var User = function(firstName, courseCount){ //functional way for creating the object
     this.firstName = firstName; // recommended way of defining objects (functional approch)
     this.courseCount = courseCount; 
@@ -20,7 +22,7 @@ new: responsible for
 
 // to add properties in the main object prototype without actually changing the code of the main object which can be access by all new users.
 
-User.prototype.getFirstName = function(){ //new also looks for these prototypes which are defined outside the main object to add it into the main object.
+User.prototype.getFirstName = function(){ //new also looks for these prototypes which are defined outside the main object to add it into the main object without modifying the original object.
     
     console.log(`Your first name is ${this.firstName}`);
 }
@@ -40,3 +42,25 @@ else console.log("property not present");
 var name2 = new User("prajapati", 3);
 name2.getCourseCount();
 name2.getFirstName();
+
+
+// TODO: Prototypal inheritence
+
+let obj1 = {
+    fullname: "shivanand",
+    rollno: 23,
+    getFullName: function(){
+        console.log(this.fullname);
+    }
+}
+obj1.getFullName();
+
+let obj2 = {
+    fullname: "saini"
+};
+
+// we want to access the rollno property in obj2
+// not used very much
+obj2.__proto__ = obj1;
+
+console.log(obj2.rollno);

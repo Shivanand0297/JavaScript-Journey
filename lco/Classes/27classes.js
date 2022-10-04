@@ -4,6 +4,7 @@ class User {
     constructor(name, email){ //constructor is a method which runs as soon as a object is created.
         this.name = name;
         this.email = email;
+        this.score = 0; // by default value is 0
     }
 
     cousreList = []; //public to all

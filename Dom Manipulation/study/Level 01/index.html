@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model</title>
+  </head>
+  <body>
+    <ul>
+      <li>Hello</li>
+    </ul>
+    <p></p>
+    <script>
+      // Root Node
+      // Below Three Command will show document Element
+      console.log(window.document);
+      console.log(document);
+      console.log(document.documentElement);
+
+      // Below will show everything about HEAD
+      console.log(document.head);
+      // Below will show Everything about Body
+      console.log(document.body);
+
+      // Children
+      // document.body.style.backgroundColor = "Red";
+      // Will Show Everything Children have
+      console.log(document.body.children);
+      // console.log(document.body.childNodes); // not to show
+      console.log(document.body.firstElementChild);
+      // console.log(document.body.firstChild); // Not to show
+      // console.log(document.body.lastChild); // Not to show
+      console.log(document.body.lastElementChild);
+    </script>
+  </body>
+</html>

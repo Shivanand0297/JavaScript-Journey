@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level 2</title>
+  </head>
+  <body>
+    <!-- getElementById
+    <p id="one"><span>Hi</span>Hello JavaScript</p>
+    <script>
+      var val = document.getElementById("one");
+      console.log(val.innerHTML);
+      console.log(val.innerText);
+    </script> -->
+
+    <!-- getElementByClassName -->
+    <!-- HTMLCollection array of element -->
+    <!-- NodeList array of HTML Object -->
+    <!-- <ul>
+      <li class="tech">javaScript</li>
+      <li class="tech">Nodejs</li>
+      <li class="tech">Reactjs</li>
+    </ul>
+    <script>
+      const val = document.getElementsByClassName("tech");
+      console.log(val[0].innerHTML);
+      console.log(val[1].innerHTML);
+      console.log(val[2].innerHTML);
+      val[1].innerHTML = "NodeJS";
+      console.log(val[1].innerHTML);
+    </script> -->
+
+    <!-- getElementsByTagName -->
+    <!-- <h1>Hello World</h1>
+    <h2>hello Universe</h2>
+    <p>P One</p>
+    <p>P Two</p>
+    <p>P Three</p>
+    <script>
+      const val = document.getElementsByTagName("p");
+      console.log(val);
+      const val1 = document.getElementsByTagName("p")[1];
+      console.log(val1.innerText);
+      var one = (document.getElementsByTagName("p")[2].innerHTML =
+        " Hello Hitesh Sir"); 
+    document.getElementsByTagName("p")[2].style.color = "Red";
+    </script>
+
+    -->
+    <!-- HomeWork: getElementByName -->
+
+    <!-- JavaScript QuerySelector select an HTML or HTML elements by tag name, by id or by class name.  -->
+    <h1>Hello JavaScript Query Selector</h1>
+    <p>Hello</p>
+    <p>Hi One</p>
+    <p>Hi Two</p>
+    <p>Hi Three</p>
+    <script>
+      var value = document.querySelector("p");
+      var value = document.querySelector(".classname");
+      var value = document.querySelector("#idName");
+      //   var value = (document.querySelector("p").style.backgroundColor = "Red");
+      //   console.log(value);
+
+      //   Adding Attribute
+      //   var value1 = document.querySelector("p");
+      //   value1.className = "One";
+      //   var value2 = document.querySelector("p");
+      //   value2.id = "Hello";
+
+      var value = document.querySelectorAll("p");
+      //   console.log(value);
+      //   value[3].setAttribute("class", "js");
+      value[3].classList.add("title", "hello", "hi");
+      value[2].setAttribute("id", "js");
+      //   To add Value
+      value[3].textContent = "JavaScript Hitesh Sir";
+    </script>
+  </body>
+</html>

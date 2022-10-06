@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1 id="heading">Hello i'm heading <span> and hi i am a span </span></h1>
+    <h1 id="sub-heading">Hello again i'm a sub-heading</h1>
+    <P class="para">hi</P>
+    <P id="bye" class="para">bye</P>
+    <P class="para">hola</P>
+    <P class="para">hello</P>
+    <ul>
+        <li class="temp">HTML</li>
+        <li class="temp">CSS</li>
+        <li class="temp">JS</li>
+    </ul>
+
+    <ul class="unlist">
+
+    </ul>
+    <script>
+        // Root
+        // console.log(document);  // the whole page
+        // console.log(window.document);   // window is global by  object default
+        // console.log(document.documentElement);
+        // console.log(document.body.firstElementChild);
+
+        // TODO: Finding element by ID
+
+        // let hed = document.getElementById("heading");
+        // console.log(hed);
+
+
+        // this will give full html content
+        let content = document.getElementById("heading").innerHTML;
+        console.log(content);
+        
+        // this will give text only
+        let content2 = document.getElementById("heading").innerText;
+        console.log(content2);
+        
+        // getting elements by classname
+
+        let var2 = document.getElementsByClassName("temp")
+        console.log(var2);  // this is an array
+        console.log(var2[1]); // will give the li element
+        console.log(var2[1].innerText); // will give text content
+
+        
+        // get elements by tag name
+
+        let var3 = document.getElementsByTagName("h1")
+        console.log(var3); // full html element  in array format
+
+        let var4 = document.getElementsByTagName("h1")[0].innerText;
+        console.log(var4); // Hello i'm heading and hi i am a span
+
+        // by queryselector
+
+        let var5 = document.querySelector("p") // will only give the first element
+        console.log(var5);
+        
+        let var6 = document.querySelectorAll("p") // will give all p
+        console.log(var6);
+        
+        let var7 = document.querySelector(".para") // will give all p which have class para
+        console.log(var7);
+        
+
+        // TODO: changing: to set an attribute to the element
+
+        let val2 = document.querySelectorAll("p")
+        val2[1].setAttribute("id", "js")
+        val2[2].setAttribute("class", "hola")
+
+        // to add class list
+
+        val2[3].classList.add("hola", "hi")
+
+        // how to change the content in the p
+
+        val2[3].textContent = "haha you got changed"
+
+        // TODO: adding and deleting
+
+        // one way
+    //     let list =`
+    //     <li>hah</li>
+    //     <li>s</li>
+    //     <li>v</li>
+    //     `
+    //    let ul = document.querySelector(".unlist")
+    //     ul.innerHTML = list;
+
+
+    let title = document.createElement("h1") //<h1></h1>
+    
+    title.className = "heading";    //<h1 class="heading"></h1>
+    
+    title.textContent = "created using javascript"  //<h1 class="heading">created using javascript</h1>
+    
+    title.style.backgroundColor = "red" //<h1 class="heading" style="background-color: red">created using javascript</h1>
+
+    document.body.appendChild(title)    // adding in the body of HTML
+
+    // for removing the elements
+
+    let ul = document.querySelector("ul");
+    let list = document.querySelectorAll("li");
+
+    for (const l of list) {
+        ul.removeChild(l);
+    }
+    
+    
+    // adding events
+/*
+  click
+  db click
+  mouse enter
+  mouse leave
+  mouse over
+  input
+  change
+  blur
+  key press
+  key up
+ */
+    </script>
+
+</body>
+</html>

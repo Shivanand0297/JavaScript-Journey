@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level 03</title>
+  </head>
+  <body>
+    <!-- InnerHTML -->
+    <!-- <ul></ul>
+    <script>
+      const list = `
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+      `;
+      const ul = document.querySelector("ul");
+      ul.innerHTML = list;
+    </script> -->
+    <!-- Creating Element -->
+    <!-- <script>
+      // Create Element
+      //   let title = document.createElement("h1");
+      //   title.className = "title";
+      //   title.style.fontSize = "24px";
+      //   title.textContent = "Creating HTML element DOM Day 2";
+      //   console.log(title);
+      //   //   //Element. append() can append several nodes and strings, whereas Node. appendChild() can only append one node.
+      //   document.body.appendChild(title);
+      //   let title;
+      //   for (let i = 0; i < 3; i++) {
+      //     title = document.createElement("h1");
+      //     title.className = "title";
+      //     title.style.fontSize = "24px";
+      //     title.textContent = i;
+      //     document.body.appendChild(title);
+      //   }
+    </script> -->
+
+    <h1>Removing HTML Element</h1>
+    <ul>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+    <script>
+      const ul = document.querySelector("ul");
+      const lists = document.querySelectorAll("li");
+      for (list of lists) {
+        ul.removeChild(list);
+        // ul.innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

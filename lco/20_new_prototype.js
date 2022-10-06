@@ -10,7 +10,8 @@ var User = function(firstName, courseCount){ //functional way for creating the o
     }
 }
 
-// var name1 = User("shivanand", 2); // will give undefined.
+// var name1 = User("shivanand", 2); 
+// console.log(name1); // will give undefined.
 // Whenever we want to define a new object by functional way we use "new" keyword
 
 /*

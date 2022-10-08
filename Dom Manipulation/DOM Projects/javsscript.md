@@ -1,6 +1,6 @@
 # Dom Manipulation Assignment
 
-1. Webiste Name: [Dev To](https://dev.to/)
+# 1. Webiste Name: [Dev To](https://dev.to/)
 
 ### Topics
 
@@ -18,7 +18,16 @@
 
 ![Output](./Pic2.png)
 
-2. Website Name: [Apple](https://support.apple.com/en-in)
+### Solution
+
+![solution](./Solution%20pics/1.png)
+- document.querySelector(".side-bar .crayons-card .crayons-subtitle-2").innerHTML = "Shivanand"
+
+- document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I enjoy writing code and playing football"
+
+---
+
+# 2. Website Name: [Apple](https://support.apple.com/en-in)
 
 ### Task
 
@@ -30,7 +39,31 @@
 
 ['iPhone', 'Mac', 'iPad', 'Watch', 'AirPods', 'Music', 'TV']
 
-3. Webiste Name: [Youtube Support](https://support.google.com/youtube/)
+### Solution
+
+```JavaScript
+let productList = [];
+
+let list = document.querySelectorAll(".as-imagegrid-item")
+
+for(let i of list){
+    productList.push(i.innerText)
+}
+console.log(productList);
+
+```
+
+```JavaScript
+Output:
+
+['iPhone\nSupport', 'Mac\nSupport', 'iPad\nSupport', 'Watch\nSupport', 'AirPods\nSupport', 'Music\nSupport', 'TV\nSupport']
+
+```
+
+---
+
+
+# 3. Website Name: [Youtube Support](https://support.google.com/youtube/)
 
 ### Topics
 
@@ -48,7 +81,33 @@
 
 ![Output](./Pic5.png)
 
-4. Webiste Name: [OnePlus](https://www.oneplus.in/support)
+### Solution
+
+```JavaScript
+let sec = document.createElement("section");
+
+sec.classList.add("parent")
+sec.style.padding= ".875rem 3.25rem .875rem 1.75rem"
+sec.style.color= "#1f1f1f"
+sec.style.fontSize= "1rem"
+sec.style.fontWeight= "500"
+sec.style.lineHeight= "1.25rem"
+sec.style.borderTop= "thin solid #a9acaa"
+sec.style.margin= "0"
+
+
+let faq = document.createTextNode("My New FAQ");
+sec.appendChild(faq)
+
+let appendList = document.querySelector(".main-content .article");
+appendList.appendChild(sec)
+
+```
+![2](./Solution%20pics/2.png)
+
+---
+
+# 4. Website Name: [OnePlus](https://www.oneplus.in/support)
 
 ### Topics
 
@@ -66,7 +125,18 @@
 
 ![Output](./Pic7.png)
 
-5. Webiste Name: [Samsung](https://www.samsung.com/in/offer/online/samsung-fest/)
+### Solution
+
+```JavaScript
+let contact = document.querySelector(".customer-support .one-tel-number")
+contact.innerHTML = "+91 7905200354"
+```
+![3](./Solution%20pics/3.png)
+
+---
+
+
+## 5. Webiste Name: [Samsung](https://www.samsung.com/in/offer/online/samsung-fest/)
 
 ### Topics
 
@@ -84,7 +154,17 @@
 
 ![Output](./Pic9.png)
 
-6. Webiste Name: [Adidas](https://www.adidas.co.in/)
+### Solution
+
+```JavaScript
+document.querySelector(".diwali-deals-product-sale-pro .diwali-deals-product-sale-btn").innerHTML = "Check Out"
+```
+
+![checkout](./Solution%20pics/4.png)
+
+---
+
+## 6. Webiste Name: [Adidas](https://www.adidas.co.in/)
 
 ### Topics
 
@@ -102,7 +182,19 @@
 
 ![Output](./Pic11.png)
 
-7. Webiste Name: [MDN Web Docs](https://developer.mozilla.org/en-US/)
+### Solution
+
+```JavaScript
+let search = document.querySelector("input");
+search.addEventListener("mouseenter", ()=>{
+    search.style.backgroundColor = "red";   
+});
+
+```
+
+---
+
+## 7. Webiste Name: [MDN Web Docs](https://developer.mozilla.org/en-US/)
 
 ### Topics
 
@@ -121,7 +213,9 @@
 
 ![Output](./Pic13.png)
 
-8. Webiste Name: [Google](https://www.google.com/)
+---
+
+# 8. Website Name: [Google](https://www.google.com/)
 
 ### Topics
 
@@ -139,7 +233,21 @@
 
 ![Output](./Pic15.png)
 
-9. Webiste Name: [Code Wars](https://www.codewars.com/)
+### Output
+
+```JavaScript
+let language = document.querySelector("#SIvCob");
+let links = language.querySelectorAll("a");
+
+for (let i=0; i<links.length; i=i+2) {
+     language.removeChild(links[i]);
+}
+```
+![googleSolutions](./Solution%20pics/8.png)
+
+---
+
+# 9. Website Name: [Code Wars](https://www.codewars.com/)
 
 ### Topics
 
@@ -157,7 +265,21 @@
 
 ![Output](./Pic17.png)
 
-10. Webiste Name: [Freecodecamp](https://www.freecodecamp.org/)
+### Soution
+
+```JavaScript
+let hero = document.querySelector(".section .container .content-width-extra-large .display-heading-1");
+hero.style.fontFamily = "monospace";
+hero.style.color = "red";
+
+```
+
+![solution9](./Solution%20pics/9.png)
+
+
+---
+
+# 10. Webiste Name: [Freecodecamp](https://www.freecodecamp.org/)
 
 ### Topics
 
@@ -175,7 +297,20 @@
 
 ![Output](./Pic19.png)
 
-11. Webiste Name: [realme](https://www.realme.com/in/)
+### Solution
+
+```JavaScript
+let span = document.querySelector(".btn-cta-big .login-btn-text")
+span.addEventListener("mouseover", ()=>{
+    span.style.backgroundColor = "red";
+});
+```
+
+![solution10](./Solution%20pics/10.png)
+
+---
+
+# 11. Webiste Name: [realme](https://www.realme.com/in/)
 
 ### Topics
 
@@ -193,7 +328,17 @@
 
 ![Output](./Pic21.png)
 
-12. Webiste Name: [Github](https://github.com/)
+### Solution
+
+```Java
+let backgroundImage = document.querySelector(".header .wrapper .logo .icon");
+backgroundImage.style.backgroundImage = "url(image url)"
+```
+![solution11](./Solution%20pics/q11.png)
+
+---
+
+# 12. Webiste Name: [Github](https://github.com/)
 
 ### Topics
 
@@ -211,7 +356,15 @@
 
 ![Output](./Pic23.png)
 
-13. Webiste Name: [Hackerrank](https://www.hackerrank.com/)
+### Solution
+```javascript
+document.querySelector(".color-bg-default .js-braintree-encrypt .btn").style.backgroundColor = "blue"
+```
+![solution](./Solution%20pics/12.png)
+
+---
+
+# 13. Webiste Name: [Hackerrank](https://www.hackerrank.com/)
 
 ### Topics
 
@@ -229,7 +382,15 @@ Target the top description and change “Matching developers with great companie
 
 ![Output](./Pic25.png)
 
-14. Webiste Name: [Asus](https://www.asus.com/in/)
+### Solution
+
+```javascript
+document.querySelector(".fl-heading .fl-heading-text").innerText = "JSBOOTCAMP"
+```
+![solution13](./Solution%20pics/13.png)
+---
+
+# 14. Webiste Name: [Asus](https://www.asus.com/in/)
 
 ### Topics
 
@@ -247,7 +408,14 @@ Target the top description and change “Matching developers with great companie
 
 ![Output](./Pic27.png)
 
-15. Webiste Name: [Dell](https://www.dell.com/en-in/shop/deals/laptop-deals?gacd=10415953-9016-5761040-285981356-0&dgc=ST&gclid=Cj0KCQjwguGYBhDRARIsAHgRm4-XUDMhhVNyHXb3s1gY4ZBzORr_d9Se-buhJwy7asyUe7YdqEA11eEaAt6UEALw_wcB&gclsrc=aw.ds&nclid=BxjBlpBQsX6pjSHh-L8YYSU77EpfXRkG1AGMB5Wbeu386ykspfrPDnfx_DdFau20)
+### Solution
+```javascript
+document.querySelector(".HotDealsAll__HotCampaignsEventsContainer__FK0V2 .HotDealsAll__Heading__2fIbe").style.fontSize = "80px"
+```
+![solution14](./Solution%20pics/14.png)
+---
+
+# 15. Webiste Name: [Dell](https://www.dell.com/en-in/shop/deals/laptop-deals?gacd=10415953-9016-5761040-285981356-0&dgc=ST&gclid=Cj0KCQjwguGYBhDRARIsAHgRm4-XUDMhhVNyHXb3s1gY4ZBzORr_d9Se-buhJwy7asyUe7YdqEA11eEaAt6UEALw_wcB&gclsrc=aw.ds&nclid=BxjBlpBQsX6pjSHh-L8YYSU77EpfXRkG1AGMB5Wbeu386ykspfrPDnfx_DdFau20)
 
 ### Topics
 
@@ -265,7 +433,19 @@ Target the top description and change “Matching developers with great companie
 
 ![Output](./Pic29.png)
 
-16. Webiste Name: [Vercel](https://vercel.com/)
+### Solutions
+
+```javascript
+let products = document.querySelectorAll(".ps-title");
+products[4].style.textAlign = "right";
+```
+![solution15](./Solution%20pics/15.png)
+
+
+
+---
+
+# 16. Webiste Name: [Vercel](https://vercel.com/)
 
 ### Topics
 
@@ -283,7 +463,16 @@ Target the top description and change “Matching developers with great companie
 
 ![Output](./Pic31.png)
 
-17. Webiste Name: [Sony](https://www.sony.co.in/)
+### Solution
+
+```javascript
+document.querySelector(".section-title_title__VEDfK").innerHTML = "Start With Scratch"
+```
+![solution16](./Solution%20pics/16.png)
+
+---
+
+# 17. Webiste Name: [Sony](https://www.sony.co.in/)
 
 ### Topics
 
@@ -301,7 +490,15 @@ Target the top description and change “Matching developers with great companie
 
 ![Output](./Pic32.png)
 
-18. Webiste Name: [Philips](https://www.philips.co.in/)
+### Solutions
+```javascript
+document.querySelector(".btn-container .btn").innerHTML = new Date().toString();
+```
+![solution17](./Solution%20pics/17.png)
+
+---
+
+# 18. Webiste Name: [Philips](https://www.philips.co.in/)
 
 ### Topics
 
@@ -319,7 +516,15 @@ Target the top description and change “Matching developers with great companie
 
 ![Output](./Pic35.png)
 
-19. Webiste Name: [Canon](https://in.canon/)
+### Solution
+```javascript
+document.querySelector("footer").style.background = "linear-gradient(to right, #ffe259, #ffa751)"
+```
+![solution18](./Solution%20pics/18.png)
+
+---
+
+# 19. Webiste Name: [Canon](https://in.canon/)
 
 ### Topics
 
@@ -337,7 +542,18 @@ Target the top description and change “Matching developers with great companie
 
 ![Output](./Pic37.png)
 
-20. Webiste Name: [Oppo](https://www.oppo.com/in/)
+### Solution
+
+```javascript
+let logo = document.querySelector(".navbar-brand");
+let link = logo.childNodes[1].currentSrc;
+console.log(link);
+```
+![solution19](./Solution%20pics/19.png)
+
+---
+
+# 20. Website Name: [Oppo](https://www.oppo.com/in/)
 
 ### Topics
 
@@ -354,3 +570,10 @@ Target the top description and change “Matching developers with great companie
 ### Output
 
 ![Output](./Pic39.png)
+
+### Solution 
+
+```javascript
+document.querySelector(".desc").style.color = "orange"
+```
+![solution20](./Solution%20pics/20.png)

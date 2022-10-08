@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Event Listner</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Welcome To JavaScript BootCamp</h1>
+    <!-- Button Event -->
+    <!-- <button onclick="hello()" id="js">Try Me</button> -->
+    <!-- <button ondblclick="hello()" id="js">Try Me</button> -->
+    <!-- <button onmouseenter="hello()" id="js">Try Me</button> -->
+    <!-- <button onmouseleave="hello()" id="js">Try Me</button> -->
+    <!-- <script>
+      function hello() {
+        document.getElementById("js").innerHTML = "Hello I was pressed";
+      }
+    </script> -->
+    <!-- More on Event Listner -->
+    <!-- <p id="js1"></p>
+    <button id="js">Button</button>
+    <script>
+      document.addEventListener("mouseenter", mouseClick);
+      function mouseClick() {
+        document.getElementById("js").style.backgroundColor = "Red";
+        // document.getElementById("js1").innerHTML = "Hello JavaScript";
+      }
+      //   document.addEventListener("click", hello);
+      //   function hello() {
+      //     document.getElementById("js").innerHTML = "Hello JS ";
+      //   } 
+    </script>-->
+
+    <!-- input Event Listner -->
+    Enter Your Name :
+    <input type="text" id="name" name="input" />
+    <!-- <input type="text" id="name" oninput="input()" /> -->
+    <p id="js"></p>
+    <script>
+      document.addEventListener("input", input);
+      function input() {
+        var one = document.getElementById("name").value;
+        document.getElementById("js").innerText = "you are Writting " + one;
+        // document.getElementById("js").innerText =
+        //   "you are Writting " + one.toUpperCase();
+      }
+    </script>
+  </body>
+</html>

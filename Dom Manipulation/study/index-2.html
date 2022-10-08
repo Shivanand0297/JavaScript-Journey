@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on DOM</title>
+</head>
+<body>
+    <h1>More on DOM</h1>
+    <h1 id="input"></h1>  
+    <button onclick="math()" id="promt">Submit</button>
+    <script>
+
+        // TODO: alert
+
+        // alert("hi there")   // this alert can load anywhere in the window, it depends on browser
+        // window.alert("hi there") //same as above;
+
+        // TODO: confirmation
+        // confirmation box
+       
+        /*
+        let con = confirm("Are You Sure"); // will give two options yes or no.
+       if (con) {
+        document.getElementById("input").innerHTML = "pressed yes";
+       }
+       else{
+        document.getElementById("input").innerHTML = "pressed no";
+       }
+       */
+
+       // TODO: Promt
+       //prompt("Enter your age","18+")   // the socond parameter will be taken by default
+
+       let value = prompt("Solve this: 20-10", "0")
+
+       if (value == 10) {
+        document.getElementById("input").innerHTML = "Ticked Booked Sucessfully";
+       }
+       else document.getElementById("input").innerHTML = "Ticked Booking Failed";
+
+    //    another way (can be used for filling the details)
+    function math(){
+        let value = prompt("Solve this: 20-10", "0")
+        if (value == 10) {
+            document.getElementById("input").innerHTML = "Ticked Booked Sucessfully";
+        }
+        else document.getElementById("input").innerHTML = "Ticked Booking Failed";
+
+    }
+
+    
+
+
+    </script>
+</body>
+</html>

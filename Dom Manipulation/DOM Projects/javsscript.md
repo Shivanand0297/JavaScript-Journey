@@ -21,10 +21,11 @@
 ### Solution
 
 ![solution](./Solution%20pics/1.png)
-- document.querySelector(".side-bar .crayons-card .crayons-subtitle-2").innerHTML = "Shivanand"
 
-- document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I enjoy writing code and playing football"
-
+```javascript
+document.querySelector(".side-bar .crayons-card .crayons-subtitle-2").innerHTML = "Shivanand"
+document.querySelector(".side-bar .crayons-card .color-base-70").innerHTML = "I enjoy writing code and playing football"
+```
 ---
 
 # 2. Website Name: [Apple](https://support.apple.com/en-in)

@@ -214,6 +214,13 @@ search.addEventListener("mouseenter", ()=>{
 
 ![Output](./Pic13.png)
 
+### Solution
+```javascript
+document.getElementById('hp-search-input').value = "Javascript";
+document.querySelector("#hp-search-form").submit()
+```
+![solution07](./Solution%20pics/07.png)
+
 ---
 
 # 8. Website Name: [Google](https://www.google.com/)

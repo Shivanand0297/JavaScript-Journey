@@ -53,14 +53,23 @@ function createFaq() {
     flexDiv.appendChild(button);
 
     // adding event listner
-    button.addEventListener("click", ()=>{
+    button.addEventListener("click", (e)=>{
       // console.log(e);
-      // let tar = e.target;
+      let tar = e.target.closest(".faq");
       // console.log(tar);
-      let p = document.createElement("p");
-      let ans = document.createTextNode(currentfaq.answer);
-      p.appendChild(ans);
-      div.appendChild(p);
+      let answerTag = tar.querySelector("p");
+      // console.log(answerTag);
+      
+      if(answerTag){
+        answerTag.remove();
+      }
+      else{
+        let p = document.createElement("p");
+        let ans = document.createTextNode(currentfaq.answer);
+        p.appendChild(ans);
+        div.appendChild(p);
+      }
+      
     })
       
       

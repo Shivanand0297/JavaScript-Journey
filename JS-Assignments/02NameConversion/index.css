@@ -28,6 +28,8 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  width: 50%;
+  transition: .5s ease;
 }
 
 .case_div {
@@ -55,11 +57,17 @@
   color: black;
 }
 
-#convert-btn {
+#convert-btn, 
+#reset-btn {
   outline: none;
   box-shadow: none;
   border: none;
   border-radius: 12px;
   padding: 0.3em 1.4em;
   cursor: pointer;
+  width: 80px;
+}
+
+#reset-btn{
+  margin-top: 10px;
 }

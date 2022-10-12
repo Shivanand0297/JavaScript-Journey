@@ -6,3 +6,4 @@ const newtest = [2, 34, 6, 54, 46, 456];
 
 const result = newtest.filter( (num) => num !=6 ); //modifies the array and creates the new one
 console.log(result);
+console.log(newtest);

@@ -22,11 +22,11 @@ userCourseDetail.courseCount();
 
 // TODO: to get keys
 
-//console.log(Object.keys(userCourseDetail));
+console.log(Object.keys(userCourseDetail));
 
 // TODO: TO get values
 
-//console.log(Object.values(userCourseDetail));
+console.log(Object.values(userCourseDetail));
 
 // to check wether key is present in the object or not
 

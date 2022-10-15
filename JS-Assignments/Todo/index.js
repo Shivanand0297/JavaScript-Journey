@@ -9,8 +9,8 @@ function addTodo(){
 
     // selecting input
     const inputTag = document.querySelector(".input");
-    const inputValue = inputTag.value;
-    const textNode = document.createTextNode(inputValue)
+    let inputValue = inputTag.value;
+    let textNode = document.createTextNode(inputValue)
 
     // targeting ul and li
     const ul = document.querySelector(".item_input")
@@ -51,7 +51,13 @@ function addTodo(){
     // adding event listner on edit button
     editButton.addEventListener("click",()=>{
         console.log("editing..");
+        let update = prompt("what is the update.");
+        console.log(update);
+        inputValue = " " + update;
+        textNode = document.createTextNode(inputValue);
+        li.className = "item";
         li.appendChild(textNode);
+
     })
 
 }

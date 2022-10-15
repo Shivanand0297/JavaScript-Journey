@@ -6,7 +6,7 @@
 
 body {
   height: 100%;
-  background-color: rgb(224, 142, 26);
+  background: linear-gradient(to left, #0f0c29, #302b63, #24243e);
 }
 
 h1 {

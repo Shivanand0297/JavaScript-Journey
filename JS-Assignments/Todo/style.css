@@ -79,7 +79,8 @@ h1 {
   color: rgb(255, 255, 255);
   border: none;
   width: 350px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  list-style: none;
 }
 
 .editButton {
@@ -91,6 +92,7 @@ h1 {
   color: #383cc1;
   border: none;
   cursor: pointer;
+  float: right;
 }
 
 .deleteButton {
@@ -102,4 +104,5 @@ h1 {
   color: rgb(223, 16, 16);
   border: none;
   cursor: pointer;
+  float: right;
 }

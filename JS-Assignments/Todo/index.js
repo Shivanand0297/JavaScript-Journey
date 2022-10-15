@@ -52,11 +52,13 @@ function addTodo(){
     editButton.addEventListener("click",()=>{
         console.log("editing..");
         let update = prompt("what is the update.");
-        console.log(update);
-        inputValue = " " + update;
-        textNode = document.createTextNode(inputValue);
-        li.className = "item";
-        li.appendChild(textNode);
+        if (update!=null) {
+            console.log(update);
+            inputValue = " " + update;
+            textNode = document.createTextNode(inputValue);
+            li.className = "item";
+            li.appendChild(textNode);
+        }
 
     })
 

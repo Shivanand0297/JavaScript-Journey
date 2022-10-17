@@ -7,11 +7,33 @@ addButton.addEventListener("click", addTodo);
 
 function addTodo(){
 
+    
     // selecting input
     const inputTag = document.querySelector(".input");
     let inputValue = inputTag.value;
     let textNode = document.createTextNode(inputValue)
 
+    if(inputValue === " " || inputValue === ""){
+
+        let p = document.createElement("p")
+        let pValue = document.createTextNode("Please Enter a valid Todo")
+        p.appendChild(pValue);
+        let container = document.querySelector(".container")
+
+        container.appendChild(p);
+        p.style.opacity = "1";
+        p.style.color = "red"
+        p.style.position = "relative"
+        p.style.top = "30px"
+
+        setTimeout(()=>{
+        p.style.opacity = "0";
+        controls.removeChild(p);    // TODO: NEW
+        },2000)
+
+        return false;
+    }else{
+        
     // targeting ul and li
     const ul = document.querySelector(".item_input")
     const li = document.createElement("li");
@@ -61,5 +83,6 @@ function addTodo(){
         }
 
     })
+    }
 
 }

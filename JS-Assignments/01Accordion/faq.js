@@ -69,7 +69,7 @@ function createFaq() {
         p.appendChild(ans);
         div.appendChild(p);
       }
-      
+
     })
       
       

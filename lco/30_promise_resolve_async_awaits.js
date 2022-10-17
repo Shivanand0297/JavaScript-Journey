@@ -35,7 +35,7 @@ the value and probably then we want to do console.log
 
 // function to call above functions methods
 
-const callMe = async () => { //making entire method synchronous
+const callMe = async () => { //making entire method asynchronous
     
     let valOne = uno();
     console.log(valOne);
@@ -46,7 +46,7 @@ const callMe = async () => { //making entire method synchronous
     let valthree = tres();
     console.log(valthree);
 
-/* Output:
+/* Output: without asyn, wait, promise
    one
    undefined // because the value is not assigned immediately, it is assiging after 3sec and we expect that we will get it immediately (some api request can takes longer to execute)
    three

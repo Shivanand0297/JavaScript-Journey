@@ -79,7 +79,7 @@ form.addEventListener("submit", generatedOnSubmit);
 
 /** Learnings
  * 
- * - adding event listner on form to look for a click event
+ * - adding event listner on form to look for a submit event
  * - adding loading animation
  * - how to add attribute to a link tag (a.href, a.download = "id")
  * 

@@ -34,11 +34,21 @@
         <span id="userScoreVal">0</span> : <span id="compScoreVal">0</span>
         <div class="compscore">COMP</div>
       </div>
-
+      <select id="noOfRound">
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" >5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
       <div class="result">
-        <p id="result-user-stat">User:</p>
-        <p id="result-comp-stat">Computer:</p>
-        <p id="result-final-stat">Winner:</p>
+        <p id="draw-result">Draw: <span id="draws"></span></p>
+        <p id="result-user-stat">User: <span id="user"></span></p>
+        <p id="result-comp-stat">Computer: <span id="com"></span></p>
+        <p id="result-final-stat">Winner: <span id="winner"></span></p>
       </div>
 
       <div class="choices">

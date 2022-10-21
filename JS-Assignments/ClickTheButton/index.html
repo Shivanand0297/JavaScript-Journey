@@ -14,6 +14,11 @@
     </div>
   </body>
   <script>
-    // write code here
+    let clicked = 0;
+    const counter = document.querySelector("#counter");
+    const increase = () =>{
+      ++clicked;
+      counter.innerText = clicked;
+    }
   </script>
 </html>

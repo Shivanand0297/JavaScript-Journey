@@ -48,7 +48,7 @@ ul li label {
   cursor: pointer;
 }
 
-button {
+#submit {
   background-color: #8e44ad;
   color: #fff;
   border: none;
@@ -60,11 +60,32 @@ button {
   padding: 1.3rem;
 }
 
-button:hover {
+#submit:hover {
   background-color: #732d91;
 }
 
-button:focus {
+#submit:focus {
   outline: none;
   background-color: #5e3370;
+}
+
+.score{
+  width: 60%;
+  height: 50%;
+  margin: 0px auto;
+  padding: 10px;
+  background-color: #5DA3FA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn{
+  width: 50%;
+  height: 30px;
+  border-radius: 5px;
+  background: #8e44ad;
+  color: #fff;
+  border: none;
 }

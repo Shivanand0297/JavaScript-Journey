@@ -42,7 +42,7 @@ body {
 .equalButton:active {
   background-color: #3e8e41;
   box-shadow: 0 3px #666;
-  transform: translateY(4px);
+  transform: translateY(1px);
 }
 
 .button:hover,

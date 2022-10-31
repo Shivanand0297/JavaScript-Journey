@@ -1,5 +1,5 @@
 // cashing the dom
-
+// TODO: 1
 const musicContainer = document.querySelector(".music-container");
 const playBtn = document.querySelector("#play");
 const prevBtn = document.querySelector("#prev");
@@ -11,6 +11,7 @@ const title = document.querySelector("#title");
 const cover = document.querySelector("#cover");
 
 // song title
+// TODO: 2
 const songs = [
   "Castle of glss-Linkin Park",
   "In the end-Linkin Park",
@@ -19,6 +20,7 @@ const songs = [
 ];
 
 // keep track of songs
+// TODO: 3
 let songIndex = 1;
 
 const loadSong = (song) =>{
@@ -30,7 +32,7 @@ const loadSong = (song) =>{
 // initially loads the song
 loadSong(songs[songIndex])
 
-
+// TODO: 5
 const playSong = () =>{
     musicContainer.classList.add("play")
     // changing icon from play to pause
@@ -38,9 +40,10 @@ const playSong = () =>{
     playBtn.querySelector("i.fa").classList.add("fa-pause")
 
     // html audio tag had its own api and methods
-    audio.play();
+    audio.play(); // TODO: new
 }
 
+// TODO: 6
 const pauseSong = () =>{
     musicContainer.classList.remove("play")
     // changing icon from play to pause
@@ -49,6 +52,7 @@ const pauseSong = () =>{
     audio.pause();
 }
 
+// TODO: 8
 const prevSong = () =>{
     songIndex--
     if(songIndex < 0){
@@ -59,6 +63,7 @@ const prevSong = () =>{
 
 }
 
+// TODO: 9
 const nextSong = () =>{
     songIndex++
     if(songIndex > songs.length-1){
@@ -68,15 +73,17 @@ const nextSong = () =>{
     playSong()
 }
 
+// TODO: 11
 const updateProgress = (e) =>{
     // e.srcElement.duration
     // e.srcElement.currentTime
-    const { duration, currentTime} = e.srcElement;
+    const { duration, currentTime} = e.srcElement; //destructuring
     const progressPercentage = (currentTime/duration)*100;
     progress.style.width = `${progressPercentage}%`
 }
-
+// TODO: 12
 const setProgress = (e) =>{
+    // getting the width of the progress container
     const width = progressContainer.clientWidth;
     const clickX = e.offsetX;
     const duration = audio.duration;
@@ -88,6 +95,7 @@ const setProgress = (e) =>{
 
 
 // eventListners
+// TODO: 4
 
 playBtn.addEventListener("click",()=>{
     // first we need to check that song is playing or not
@@ -102,10 +110,11 @@ playBtn.addEventListener("click",()=>{
 })
 
 // change events
-
+// TODO: 7
 prevBtn.addEventListener("click", prevSong)
 nextBtn.addEventListener("click", nextSong)
 
+// TODO: 10
 audio.addEventListener("timeupdate", updateProgress)  // TODO: new
 audio.addEventListener("ended", nextSong)  // TODO: new
 

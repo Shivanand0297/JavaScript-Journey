@@ -42,13 +42,13 @@ body{
     bottom: 0;
     left: 0;
     object-fit: cover;
-    animation: rotate 3s linear infinite;   /*TODO: new */
+    animation: rotate 4s linear infinite;   /*TODO: new */
     animation-play-state: paused;  /*TODO: new */
 }
 
 /* we will add play class dynamicaly to rotate the cover */
 /* if music container has the play class then go ahead and grab the img and set animation-play-state to running */
-.music-container.play .img-container img{
+.music-container.play .img-container img{   /*TODO: new */
     animation-play-state: running;
 }
 
@@ -71,7 +71,7 @@ body{
 .action-btn{
     background-color: #fff;
     border: 0;
-    color: #11998eac;
+    color: rgba(17, 153, 142, 0.675);
     font-size: 20px;
     cursor: pointer;
     padding: 10px;
@@ -79,7 +79,7 @@ body{
 }
 
 .action-btn-big{
-    color: #119186;
+    color: rgb(17, 145, 134);
     font-size: 30px;
 }
 
@@ -124,5 +124,5 @@ body{
     height: 100%;
     width: 0%;
     border-radius: 4px;
-    transition: width .1s linear;
+    transition: width .1s linear; /*TODO: new*/
 }

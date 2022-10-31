@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap');
+
+
+*{
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: "Lato", sans-serif;
+    background: linear-gradient(to bottom, #11998e, #38ef7d);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.music-container{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgba(165, 248, 165, 0.847);
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0px;
+    z-index: 10;
+}
+
+.img-container{
+    position: relative;
+    width: 120px;
+}
+
+.img-container img{
+    width: inherit;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    animation: rotate 3s linear infinite;   /*TODO: new */
+    animation-play-state: paused;  /*TODO: new */
+}
+
+/* we will add play class dynamicaly to rotate the cover */
+/* if music container has the play class then go ahead and grab the img and set animation-play-state to running */
+.music-container.play .img-container img{
+    animation-play-state: running;
+}
+
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn{
+    background-color: #fff;
+    border: 0;
+    color: #11998eac;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0px 20px;
+}
+
+.action-btn-big{
+    color: #119186;
+    font-size: 30px;
+}
+
+/* to remove outline on focus */
+
+.action-btn:focus{
+    outline: none;
+}
+
+.music-info{
+    background-color: rgba(255, 255, 255, 0.575);
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    opacity: 0;
+    padding: 10px 10px 10px 150px;
+    transition: transform .3s ease-in, opacity .3s ease-in ;
+    z-index: -1;
+}
+.music-info h4{
+    margin: 0px;
+}
+
+.music-container.play .music-info{
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.progress-container{
+    background: #fff;
+    height: 4px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.progress-container .progress{
+    background-color: #119186;
+    height: 100%;
+    width: 0%;
+    border-radius: 4px;
+    transition: width .1s linear;
+}

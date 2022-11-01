@@ -9,6 +9,8 @@ const progressContainer = document.querySelector(".progress-container");
 const progress = document.querySelector(".progress");
 const title = document.querySelector("#title");
 const cover = document.querySelector("#cover");
+const volumeEL = document.querySelector("#volume");
+const volumeLevel = document.querySelector("#volume-level");
 
 // song title
 // TODO: 2
@@ -93,6 +95,11 @@ const setProgress = (e) =>{
 
 }
 
+const volumeChange = () =>{
+    audio.volume = volumeEL.value/100
+    volumeLevel.innerText = `${Math.round(volumeEL.value)}%`
+}
+
 
 // eventListners
 // TODO: 4
@@ -119,3 +126,5 @@ audio.addEventListener("timeupdate", updateProgress)  // TODO: new
 audio.addEventListener("ended", nextSong)  // TODO: new
 
 progressContainer.addEventListener("click", setProgress)
+
+volumeEL.addEventListener("input", volumeChange)

@@ -30,15 +30,22 @@
         </div>
 
         <div class="navigation">
-            <button id="prev" class="action-btn">
-                <i class="fa fa-backward"></i>
-            </button>
-            <button id="play" class="action-btn action-btn-big">
-                <i class="fa fa-play"></i>
-            </button>
-            <button id="next" class="action-btn">
-                <i class="fa fa-forward"></i>
-            </button>
+            <div class="buttons">
+                <button id="prev" class="action-btn">
+                    <i class="fa fa-backward"></i>
+                </button>
+                <button id="play" class="action-btn action-btn-big">
+                    <i class="fa fa-play"></i>
+                </button>
+                <button id="next" class="action-btn">
+                    <i class="fa fa-forward"></i>
+                </button>
+            </div>
+            <div class="audio-element">
+                <input type="range" min="0" max="100" value="70" id="volume">
+                <p id="volume-level">70%</p>
+            </div>
+            
         </div>
     </div>
 

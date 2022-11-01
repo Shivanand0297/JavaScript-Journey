@@ -19,7 +19,7 @@ body{
 
 
 .music-container{
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.852);
     border-radius: 15px;
     box-shadow: 0 20px 20px 0 rgba(165, 248, 165, 0.847);
     display: flex;
@@ -27,6 +27,9 @@ body{
     position: relative;
     margin: 100px 0px;
     z-index: 10;
+    height: 165px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .img-container{
@@ -38,9 +41,9 @@ body{
     width: inherit;
     height: 120px;
     border-radius: 50%;
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0; */
     object-fit: cover;
     animation: rotate 4s linear infinite;   /*TODO: new */
     animation-play-state: paused;  /*TODO: new */
@@ -64,12 +67,55 @@ body{
 
 .navigation{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
 }
+.audio-element{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+/* 
+.buttons{
+    margin-bottom: 20px;
+} */
+
+#volume{
+    -webkit-appearance: none;
+    width: 120%;
+    border-radius: 5px;
+    outline: none;
+    height: 4px;
+    margin: 0px 16px;
+    background-color: #119186;
+    position: relative;
+    left: 10px;
+}
+
+#volume-level{
+    display: inline-block;
+    width: 85px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #119186;
+    color: #fff;
+    padding: 4px;
+    text-align: center;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #119186;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 
 .action-btn{
-    background-color: #fff;
+    background: transparent;
     border: 0;
     color: rgba(17, 153, 142, 0.675);
     font-size: 20px;

@@ -1,0 +1,1 @@
+## Javascript dom assingments solutions given in FSJS bootcamp 1.0

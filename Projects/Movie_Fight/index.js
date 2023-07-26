@@ -6,37 +6,63 @@ const fetchData = async (searchTerm) => {
     },
   });
 
-  console.log(response.data);
+  if (response.data.Error) {
+    return [];
+  }
+
+  return response.data.Search
 };
+
+
+const root = document.querySelector('.autocomplete');
+root.innerHTML = `
+  <label><b>Search For a Movie</b></label>
+  <input class="input" />
+  <div class="dropdown">
+    <div class="dropdown-menu">
+      <div class="dropdown-content results"></div>
+    </div>
+  </div>
+`;
 
 const input = document.querySelector("input");
+const dropdown = document.querySelector('.dropdown');
+const resultsWrapper = document.querySelector('.results');
 
-// const debounce = (func) => {
-//   let timeoutId;
-//   return (arg) => { //passing the arguments in this return will only work for one params
-//     if (timeoutId) {
-//       clearInterval(timeoutId);
-//     }
-//     timeoutId = setTimeout(() => {
-//       func(arg); // calling the func after 500 milliseconds
-//     }, 500);
-//   };
-// };
+const onInput = async event => {
+  const movies = await fetchData(event.target.value);
 
-const debounce = (func, delay = 1000) => {
-  let timeoutId;
-  return (...args) => { // getting all the arguments in an array of params
-    if (timeoutId) {
-      clearInterval(timeoutId);
-    }
-    timeoutId = setTimeout(() => {
-      func.apply(null, args); // passing all the arguments in a array form to the func fucntion
-    }, delay);
-  };
+  if (!movies.length) {
+    dropdown.classList.remove('is-active');
+    return;
+  }
+
+  resultsWrapper.innerHTML = '';
+  dropdown.classList.add('is-active');
+  for (let movie of movies) {
+    const option = document.createElement('a');
+    const imgSrc = movie.Poster === 'N/A' ? '' : movie.Poster;
+
+    option.classList.add('dropdown-item');
+    option.innerHTML = `
+      <img src="${imgSrc}" /> 
+      ${movie.Title}
+    `;
+
+    option.addEventListener("click", () => {
+      input.value = movie.Title;
+      dropdown.classList.remove('is-active');
+    })
+
+    resultsWrapper.appendChild(option);
+  }
 };
 
-const onInput = (event) => {
-    fetchData(event.target.value);
-}
-
 input.addEventListener("input", debounce(onInput, 500));
+
+// if click outside the container the dropdown will close
+document.addEventListener('click', event => {
+  if (!root.contains(event.target)) {
+    dropdown.classList.remove('is-active');
+  }
+});
